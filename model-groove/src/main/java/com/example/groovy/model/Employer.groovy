@@ -4,19 +4,13 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.persistence.Table
 
 @Entity
-@Table(name = "address")
-class Address
+class Employer
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id
 
-    String firstLine
-
-    String lastLine;
-
-    String postCode;
+    String name
 }
