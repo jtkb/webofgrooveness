@@ -19,11 +19,6 @@ public class Person
 
     private String lastName;
 
-    @OneToOne
-    private Address address;
-
-    private Vehicle vehicle;
-
     public Long getId()
     {
         return id;
@@ -52,26 +47,6 @@ public class Person
     public void setLastName(final String lastName)
     {
         this.lastName = lastName;
-    }
-
-    public Address getAddress()
-    {
-        return address;
-    }
-
-    public void setAddress(final Address address)
-    {
-        this.address = address;
-    }
-
-    public Vehicle getVehicle()
-    {
-        return vehicle;
-    }
-
-    public void setVehicle(final Vehicle vehicle)
-    {
-        this.vehicle = vehicle;
     }
 
 }

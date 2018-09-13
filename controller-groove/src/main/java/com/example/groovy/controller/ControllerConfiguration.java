@@ -1,9 +1,9 @@
 package com.example.groovy.controller;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -14,6 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableWebMvc
 @EnableSwagger2
+@ComponentScan(basePackages = {"com.example.groovy.controller"})
 public class ControllerConfiguration extends WebMvcConfigurationSupport
 {
 
@@ -24,10 +25,11 @@ public class ControllerConfiguration extends WebMvcConfigurationSupport
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build();
+                .build()
+                .pathMapping("/");
     }
 
-    @Override
+   /* @Override
     protected void addResourceHandlers(final ResourceHandlerRegistry registry)
     {
         registry.addResourceHandler("/swagger-ui.html")
@@ -35,5 +37,5 @@ public class ControllerConfiguration extends WebMvcConfigurationSupport
 
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
-    }
+    }*/
 }

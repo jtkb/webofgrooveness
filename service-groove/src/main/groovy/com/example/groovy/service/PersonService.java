@@ -6,4 +6,6 @@ public interface PersonService
 {
     Person getPerson(Long id);
 
+    Person createPerson(Person person);
+
 }

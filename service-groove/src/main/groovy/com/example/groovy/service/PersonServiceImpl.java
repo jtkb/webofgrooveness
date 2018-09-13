@@ -16,4 +16,10 @@ public class PersonServiceImpl implements PersonService
     {
         return personRepository.getOne(id);
     }
+
+    @Override
+    public Person createPerson(final Person person)
+    {
+        return null;
+    }
 }
