@@ -2,6 +2,8 @@ package com.example.groovy.controller;
 
 import com.example.groovy.model.Person;
 import com.example.groovy.service.PersonService;
+import com.example.groovy.view.Views;
+import com.fasterxml.jackson.annotation.JsonView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -20,14 +22,15 @@ public class StandardController
 {
 
     @Autowired
-    @Qualifier("groovyPersonServiceImpl")
     private PersonService personService;
 
     @ResponseBody
+    @JsonView(Views.Person.class)
     @RequestMapping(path = "/person/{id}", method = RequestMethod.GET)
-    public void getPerson(@PathVariable(name = "id") @NotNull Long id)
+    public Person getPerson(@PathVariable(name = "id") @NotNull Long id)
     {
         log.info(String.format("Getting person %d.", id));
+        return personService.getPerson(id);
     }
 
     @ResponseBody

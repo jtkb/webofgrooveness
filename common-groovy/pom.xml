@@ -9,28 +9,10 @@
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>jar</packaging>
 
-    <artifactId>controller-groove</artifactId>
+    <artifactId>common-groovy</artifactId>
 
-    <name>controller-groove</name>
-    <dependencies>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>model-groove</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>service-groove</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>common-groovy</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <name>common-groovy</name>
 
     <build>
         <plugins>

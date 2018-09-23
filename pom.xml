@@ -18,6 +18,7 @@
         <module>controller-groove</module>
         <module>model-groove</module>
         <module>service-groove</module>
+        <module>common-groovy</module>
     </modules>
     <packaging>pom</packaging>
 
